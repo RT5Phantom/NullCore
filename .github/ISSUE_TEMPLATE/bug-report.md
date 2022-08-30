@@ -2,7 +2,7 @@
 name: Bug Report
 about: Create a bug report for us to fix an issue within Null Core
 title: ''
-labels: Bug, Uncofirmed
+labels: Bug, Unconfirmed
 assignees: ''
 
 ---
