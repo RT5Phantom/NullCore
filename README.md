@@ -1,7 +1,10 @@
-# Null Core
-_Develop Spigot Plugins that are efficient and effective without requiring administrators to download a core plugin_
+<p align="center">
+ <img width="600" src="https://github.com/RT5Phantom/NullCore/blob/master/.branding/finalized/NullCore_Title.png?raw=true" alt="Null Core">
+</p>
 
 [![](https://jitpack.io/v/RT5Phantom/NullCore.svg)](https://jitpack.io/#RT5Phantom/NullCore)
+
+_Develop Spigot Plugins that are efficient and effective without requiring administrators to download a core plugin_
 
 Null Core is a framework project built on top of the Minecraft Spigot API framework in order to quicken Minecraft Server Plugin development. It features enhancement modifications to already existing classes/objects in Spigot (For example, AugmentedJavaPlugin expanding upon the base JavaPlugin from Spigot) as well as completely new classes/objects (Such as PluginConfiguration which allows plugin developers to quickly store and read plugin settings).
 
@@ -33,9 +36,13 @@ To install the Null Core framework into your Spigot Plugin project, follow the g
 <dependency>
     <groupId>com.github.rt5phantom</groupId>
     <artifactId>NullCore</artifactId>
-    <version>v{Release}</version> // For example: <version>v2.1.0-RELEASE</version>
+    <version>{Release}</version> 
 </dependency>
-``` 
+```
+```
+<version>v3.0.0-RELEASE</version> will get the full release of 3.0.0 
+<version>-SNAPSHOT</version> will get the latest commit from the repo
+```
 5. Rebuild your Maven project
 6. Null Core should now be installed in your Spigot Plugin.
     - Try changing your main plugin class from ```extends JavaPlugin``` to ```extends AugmentedJavaPlugin``` <br />
