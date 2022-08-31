@@ -1,6 +1,8 @@
 # Null Core
 _Develop Spigot Plugins that are efficient and effective without requiring administrators to download a core plugin_
+
 [![](https://jitpack.io/v/RT5Phantom/NullCore.svg)](https://jitpack.io/#RT5Phantom/NullCore)
+
 Null Core is a framework project built on top of the Minecraft Spigot API framework in order to quicken Minecraft Server Plugin development. It features enhancement modifications to already existing classes/objects in Spigot (For example, AugmentedJavaPlugin expanding upon the base JavaPlugin from Spigot) as well as completely new classes/objects (Such as PluginConfiguration which allows plugin developers to quickly store and read plugin settings).
 
 Null Core is built as a Maven dependency that can be loaded into an individual plugin and called internally, even when exported. This means that server administrators who use a Null Core enabled plugins do not need to download an extra core plugin in order to get basic functionality working on their server.
