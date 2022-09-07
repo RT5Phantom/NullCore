@@ -26,7 +26,6 @@ public abstract class AugmentedJavaPlugin extends JavaPlugin
      * Refer to 'https://minecraft.fandom.com/el/wiki/Formatting_codes' for the full list of chat formatting codes that you can use in Minecraft's chat system.
      */
     private String PluginTag = "[" + getDescription().getPrefix() + "]";
-
     /**
      * Gets the extending plugin's tag. This tag is unprocessed and could contain chat codes, if they added by a plugin developer.
      * @return Returns an unprocessed code formatted plugin tag.
@@ -35,17 +34,46 @@ public abstract class AugmentedJavaPlugin extends JavaPlugin
     {
         return PluginTag;  // Return internal private PluginTag variable
     }
-
     /**
      * Sets the extending plugin's tag. This tag can contain chat codes signaled by "&" or "§".
      * @param PluginTag New version of the plugin tag that will be used to print, which can include chat codes.
      */
-    protected void setPluginTag(String PluginTag)
-    {
+    protected void setPluginTag(String PluginTag) {
         this.PluginTag = PluginTag;  // Update internal private PluginTag variable
     }
 
-
+    // =========================================== //
+    // ============= Plugin Debugger ============= //
+    // =========================================== //
+    private Boolean DebuggerMode = false;
+    /**
+     * Gets the current state of DebuggerMode
+     * @return Returns the state of DebuggerMode
+     */
+    protected Boolean getDebuggerMode()
+    {
+        return DebuggerMode;
+    }
+    /**
+     * Sets the current state of DebuggerMode
+     * @param NewStateOfDebuggingToggle The new state of DebuggerMode
+     */
+    protected void setDebuggerMode(Boolean NewStateOfDebuggingToggle)
+    {
+        this.DebuggerMode = NewStateOfDebuggingToggle;
+    }
+    /**
+     * Sends a debugger message which is only output to the console if DebuggerMode is set to true
+     * The message is appended with a {DEBUGGER} tag and then sent through AugmentedJavapPlugin's debugInfo() method, consequently the format will be "[PluginName] {DEBUGGER} -input message-"
+     * @param message The message to be sent to the debugger
+     */
+    public void sendDebuggerMessage(@NotNull String message)
+    {
+        if (DebuggerMode)  // If DebuggerMode is true
+        {
+            debugInfo("{DEBUGGER} " + message);  // Send to debug info level
+        }
+    }
 
     // ============================================== //
     // ============= Console Messengers ============= //
@@ -61,7 +89,6 @@ public abstract class AugmentedJavaPlugin extends JavaPlugin
         // Sends the message through the bukkit console sender after translating chat colors
         getServer().getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', message));
     }
-
     /**
      * Sends a message to the console from the plugin, which can include chat formatting codes signaled by an "&" sign.
      * Please note that the "§" sign, unicode character code 'U+00A7', is translated into color codes by default, so it can also be used.
@@ -86,7 +113,6 @@ public abstract class AugmentedJavaPlugin extends JavaPlugin
     {
         getLogger().info(message);
     }
-
     /**
      * Sends a debug warning message to the console.
      * @param message Message to send.
@@ -95,7 +121,6 @@ public abstract class AugmentedJavaPlugin extends JavaPlugin
     {
         getLogger().warning(message);
     }
-
     /**
      * Sends a debug error message to the console.
      * @param message Message to send.
@@ -120,7 +145,6 @@ public abstract class AugmentedJavaPlugin extends JavaPlugin
         // Sends the message to the player after translating chat colors
         player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
     }
-
     /**
      * Sends a message to a player, which can include chat formatting codes.
      * @param player The player that is sent the message.
