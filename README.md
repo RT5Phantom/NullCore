@@ -1,21 +1,20 @@
+<!-- Header -->
 <p align="center">
  <img width="600" src="https://github.com/RT5Phantom/NullCore/blob/master/.branding/finalized/NullCore_Title.png?raw=true" alt="Null Core">
 </p>
+<p align="center"> <i>
+  Develop Spigot Plugins that are efficient and effective without requiring administrators to download a core
+</i> </p>
 
+<!-- Shields -->
+[![](https://img.shields.io/github/last-commit/rt5phantom/nullcore?label=Latest%20Commit)](https://github.com/RT5Phantom/NullCore/commits/)
+[![](https://img.shields.io/github/release-date/rt5phantom/nullcore?label=Latest%20Release)](https://github.com/RT5Phantom/NullCore/releases)
 [![](https://jitpack.io/v/RT5Phantom/NullCore.svg)](https://jitpack.io/#RT5Phantom/NullCore)
 
-_Develop Spigot Plugins that are efficient and effective without requiring administrators to download a core plugin_
 
 Null Core is a framework project built on top of the Minecraft Spigot API framework in order to quicken Minecraft Server Plugin development. It features enhancement modifications to already existing classes/objects in Spigot (For example, AugmentedJavaPlugin expanding upon the base JavaPlugin from Spigot) as well as completely new classes/objects (Such as PluginConfiguration which allows plugin developers to quickly store and read plugin settings).
 
 Null Core is built as a Maven dependency that can be loaded into an individual plugin and called internally, even when exported. This means that server administrators who use a Null Core enabled plugins do not need to download an extra core plugin in order to get basic functionality working on their server.
-
-## Original Development
-As a Minecraft plugin developer, I found that I kept remaking similar, if not directly copy-pasted, classes within my various Spigot projects. I soon started working on a solution that other Spigot developers commonly used, which was to make a library plugin that would allow my other plugins to hook into and use during server runtime. However, I remembered how annoying library plugins could be to myself as a Minecraft server administrator. Consequently, I changed my development strategy from a library plugin to a Maven dependency that could be quickly added to a project, whether it was brand new or existing.
-
-As I separate my repeatedly reused systems (From my plugins I have already developed) or come up with new common systems, I add them to the Null Core project and eventually to this repository. Originally, this project was private and off of GitHub, however I thought that some other Spigot developers would benefit from the Null Core Framework. Consequently, I uploaded a version of Null Core to the repository and changed its visibility to public. However, after some more changes, I decided to take the project down temporarily before publishing publicly again it into this repository.
-
-
 
 ## Using Null Core
 In order to use NullCore in your own projects, you will need to add it to your pom.xml in Maven. There are a few ways to do this, as listed below.
@@ -90,4 +89,9 @@ _The following is prioritized after Null Core's  [**license**](/LICENSE). In any
     - <ins>SNAPSHOT</ins> is an active development build of the project.
     - <ins>BATA</ins> is a prelease build of the project.
     - <ins>RELEASE</ins> is a final build of the project
-- **Version of Cycle** tracks the build number of the cycle. For example, the second build of the project's snapshot development.
+- **Version of Cycle** tracks the build number of the cycle. For example, the second build of the project's snapshot development.\
+
+## Original Development
+As a Minecraft plugin developer, I found that I kept remaking similar, if not directly copy-pasted, classes within my various Spigot projects. I soon started working on a solution that other Spigot developers commonly used, which was to make a library plugin that would allow my other plugins to hook into and use during server runtime. However, I remembered how annoying library plugins could be to myself as a Minecraft server administrator. Consequently, I changed my development strategy from a library plugin to a Maven dependency that could be quickly added to a project, whether it was brand new or existing.
+
+As I separate my repeatedly reused systems (From my plugins I have already developed) or come up with new common systems, I add them to the Null Core project and eventually to this repository. Originally, this project was private and off of GitHub, however I thought that some other Spigot developers would benefit from the Null Core Framework. Consequently, I uploaded a version of Null Core to the repository and changed its visibility to public. However, after some more changes, I decided to take the project down temporarily before publishing publicly again it into this repository.
