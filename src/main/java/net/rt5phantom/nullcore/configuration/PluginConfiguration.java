@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author RT5Phantom
  * @since v2.0.0
  */
-public abstract class PluginConfiguration
+public class PluginConfiguration
 {
     /**
      * An arraylist that stores the current set of ConfigOptions in an instance of this class.
